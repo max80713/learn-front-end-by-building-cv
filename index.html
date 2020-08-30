@@ -5,129 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Static Template</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/6debf59dce.js"
       crossorigin="anonymous"
     ></script>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        background-color: lightseagreen;
-      }
-
-      #card {
-        width: 744px;
-        height: 528px;
-        background-color: white;
-        position: absolute;
-      }
-
-      #intro {
-        width: 238px;
-        height: 284px;
-        background-color: darkslategray;
-        position: absolute;
-        top: 244px;
-        left: 0;
-        color: white; /* 影響下面所有的文字顏色 */
-        padding: 40px;
-      }
-
-      #about {
-        width: 320px;
-        height: 528px;
-        background-color: white;
-        position: absolute;
-        top: 0;
-        left: 238px;
-        padding-left: 24px;
-        color: gray;
-      }
-
-      #about2 {
-        width: 186px;
-        height: 528px;
-        background-color: white;
-        position: absolute;
-        top: 0;
-        left: 558px;
-      }
-
-      .block {
-        width: 138px;
-        height: 32px;
-        position: absolute;
-      }
-
-      .left-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 10px;
-      }
-
-      .right-text {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 10px;
-      }
-
-      .progress {
-        position: absolute;
-        bottom: 0;
-        width: 138px;
-        height: 12px;
-        background: gray;
-        border-radius: 6px;
-      }
-
-      .bar {
-        position: absolute;
-        top: 0;
-        left: 20px;
-        height: 12px;
-        width: 24px;
-        border-radius: 6px;
-        background-color: lightseagreen;
-      }
-
-      h4 {
-        color: lightseagreen;
-      }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
-    <div id="card">
-      <img width="238" height="244" />
-      <div id="intro">
-        <h3>徐銘谷</h3>
+    <div class="card">
+      <div class="photo photo-1"></div>
+      <div class="photo photo-2"></div>
+      <div class="photo photo-3"></div>
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="intro">
+        <h1>徐銘谷</h1>
         <p>29 歲</p>
-        <p>工程師</p>
+        <p>網頁前端工程師</p>
         <p>台灣, 台北</p>
+        <p class="quote">
+          "你不一定要很厲害，才能開始；<br />你要開始，才能很厲害。"
+        </p>
       </div>
-      <div id="about">
-        <h4><i class="fas fa-apple-alt"></i>工作經歷</h4>
-        <ul>
-          <li>便利商店店員</li>
-          <li>FoodPanda 外送員</li>
-          <li>大卡車司機</li>
-        </ul>
-        <h4>工作經歷</h4>
-        <ul>
-          <li>便利商店店員</li>
-          <li>FoodPanda 外送員</li>
-          <li>大卡車司機</li>
-        </ul>
+      <div class="detail detail-1">
+        <div>
+          <h2><i class="fas fa-user"></i> 關於我</h2>
+          <p>
+            大家好，我是谷哥，物理系畢業之後，透過自學與不斷的練習進而轉往前端工程師發展，熟悉網頁前端技術與框架，曾經擔任
+            iThome 舉辦的 2017 Modern Web
+            講者，目前任職於邦妮科技有限公司，致力於程式教學以協助新手學習程式。
+          </p>
+        </div>
+        <div>
+          <h2><i class="fas fa-suitcase"></i> 工作經歷</h2>
+          <ul>
+            <li>邦妮科技資深前端工程師 2019 ~</li>
+            <li>鉅亨網前端工程師 2018 ~ 2019</li>
+            <li>安銳智慧全端工程師 2016 ~ 2018</li>
+          </ul>
+        </div>
+        <div>
+          <h2><i class="fas fa-microphone"></i> 講師經歷</h2>
+          <ul>
+            <li>
+              Udemy
+              <a href="https://www.udemy.com/course/react-super-easy/">
+                線上課程</a
+              >
+              講師 2020
+            </li>
+            <li>
+              iThome Modern Web
+              <a href="https://modernweb.tw/2017/index.html#s2106">議程</a> 講師
+              2017
+            </li>
+            <li>資策會 Python 講師 2016</li>
+          </ul>
+        </div>
       </div>
-      <div id="about2">
-        <div class="block">
-          <div class="left-text">內向</div>
-          <div class="right-text">外向</div>
-          <div class="progress">
-            <div class="bar"></div>
+      <div class="detail detail-2">
+        <div>
+          <h2><i class="fas fa-smile"></i> 個性</h2>
+          <div class="indicator">
+            <div class="left-text">內向</div>
+            <div class="right-text">外向</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 50%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">理性</div>
+            <div class="right-text">感性</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 45%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">謹慎</div>
+            <div class="right-text">冒險</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 10%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">思考</div>
+            <div class="right-text">行動</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="left: 30%;"></div>
+          </div>
+        </div>
+        <div>
+          <h2><i class="fas fa-hammer"></i> 技能</h2>
+          <div class="indicator">
+            <div class="left-text">HTML</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 70%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">CSS</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 60%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">JavaScript</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 80%;"></div>
+          </div>
+          <div class="indicator">
+            <div class="left-text">ReactJS</div>
+            <div class="gray-bar"></div>
+            <div class="green-bar" style="width: 90%;"></div>
           </div>
         </div>
       </div>
